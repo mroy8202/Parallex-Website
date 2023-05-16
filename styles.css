@@ -1,0 +1,105 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+#wrapper {
+    height: 100vh; /* 100% of viewport height */ 
+    overflow-x: hidden; /* We donot want to scroll in horizontal direction */
+    overflow-y: auto;
+    perspective: 10px; /* To turn on the 3d */
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    height: 100%;
+    transform-style: preserve-3d; /* To make 3d */
+    z-index: -1;
+}
+
+.background {
+    /* To apply 3D effect, send the background image far away in z direction */
+    /* Now, the images is far and it shows that the size is reduced but size is not reduced */
+    /* Now use scale to zoom the image from far */
+    transform: translateZ(-40px) scale(5.1); 
+}
+
+.foreground {
+    transform: translateZ(-20px) scale(3);
+}
+
+.background, .foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1; /* h1 tag was behind images, now it will pop in front when images will go back */
+    object-fit: cover;
+}
+
+h1 {
+    position: absolute;
+    font-size: 10rem;
+    top: 5rem;
+    color: white;
+}
+
+/* SECTION */
+section {
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.sectionHeading {
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+    line-height: 1.5;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc {
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2rem;
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.bg1 {
+    /* adding images using CSS */
+    background-image: url(images/sport-1.jpg);
+}
+
+.bg2 {
+    background-image: url(images/sport-2.jpg);
+}
+
+.bg3 {
+    background-image: url(images/sport-3.jpg);
+}
+
