@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 #wrapper {
     height: 100vh; /* 100% of viewport height */ 
     overflow-x: hidden; /* We donot want to scroll in horizontal direction */
