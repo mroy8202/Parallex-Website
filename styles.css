@@ -66,6 +66,7 @@ section {
     padding: 0 10rem;
     margin: 5rem 0;
     line-height: 1.5;
+    width: fit-content;
 }
 
 .bg {
@@ -102,3 +103,33 @@ section {
     background-image: url(images/sport-3.jpg);
 }
 
+/* Adding media query to website */
+@media (max-width: 1200px) {
+    .background, .foreground {
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .sectionHeading {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 1rem;
+        padding: 0 5rem;
+        margin: 5rem 0;
+        line-height: 1.2;
+    }
+
+    .bg {
+        object-fit: cover;
+    }
+
+    .desc {
+        font-size: 2rem;
+    }
+}
